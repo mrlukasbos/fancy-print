@@ -1,5 +1,5 @@
 # fancy-print
-A simple library for better c++ prints
+A simple header-only library for better c++ prints. Works with C++17 and up. 
 
 This is a very simple library that enables fancy printing for your C++ application. Fancy prints are an extension of std::cout prints. Every print can be given a type which is displayed in a color. It also displays the filename and line number where the print is being called. After compilation these will just result in std::cout statements.
 
