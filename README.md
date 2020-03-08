@@ -2,7 +2,7 @@
 A simple header-only library for better c++ prints. Works with C++17 and up. 
 
 
-![FancyPrint screenshot]("./doc/output.png" "Fancy logging screenshot")
+![FancyPrint screenshot](./doc/output.png "Fancy logging screenshot")
 
 The above screenshot is created using the following statements:
 ```
