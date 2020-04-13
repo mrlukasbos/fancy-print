@@ -27,10 +27,20 @@ F_ERROR - indicate a non-recoverable problem
 ### Why this library?
 In some projects I recently worked on I noticed that people would often write their print statements like this:
 ```
+std::cerr << "ERROR! this is not allowed!" << std::endl;
+```
+When using  a large codebase, and suddenly this print comes up in te terminal, it could be hard to find where this error comes from. A simple solution would be adding additional information, for example the classname:
+
+```
 std::cerr << "[Classname::functionname] ERROR! this is not allowed!" << std::endl;
 ```
+
 This was vulnerable for refactors, as function/class names would sometimes change.
-Therefore, automating this process makes logging easier, and makes logs easier to find. 
+Therefore, automating this process makes logging easier, and makes logs easier to find.
+
+```
+F_ERROR("this is not allowed!") 
+```
 
 ### Why macro's?
 Under the hood, the __function__ and __file__ macro's are used to properly determine the location of the function call. 
